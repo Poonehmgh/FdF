@@ -22,17 +22,17 @@ CFLAGS = -Wall -Werror -Wextra -g
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	@$(MAKE) -C libft
-	@$(MAKE) -C minilibx_macos
-	@$(CC) $(OBJS) $(LIBFT) $(MINILIBX_MAC) -framework OpenGL -framework AppKit -o $(NAME)
+	$(MAKE) -C libft
+	$(MAKE) -C minilibx_macos
+	$(CC) $(OBJS) $(LIBFT) $(MINILIBX_MAC) -framework OpenGL -framework AppKit -o $(NAME)
 
 clean:
-	@$(MAKE) clean -C libft
-	@rm -f $(OBJS)
+	$(MAKE) clean -C libft
+	rm -f $(OBJS)
 
 fclean: clean
-	@$(MAKE) fclean -C libft
-	@rm -f $(NAME)
+	$(MAKE) fclean -C libft
+	rm -f $(NAME)
 
 re: fclean all
 
