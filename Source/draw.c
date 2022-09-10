@@ -6,7 +6,7 @@
 /*   By: pmoghadd <pmoghadd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/08 14:59:58 by pmoghadd          #+#    #+#             */
-/*   Updated: 2022/09/10 20:39:47 by pmoghadd         ###   ########.fr       */
+/*   Updated: 2022/09/10 20:59:25 by pmoghadd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,9 @@ void	draw_sub_function3(t_data *a, t_data *b, t_data *img)
 	draw_sub_function2(b, img, img->x, img->y + 1);
 	bresenham(a, b, *img, img->color[img->y][img->x]);
 }
+
+/* draws node by node. subfuctions are made just for sake of norminnete.
+Nothing complicated hapens  there*/
 
 void	draw(t_data *img)
 {

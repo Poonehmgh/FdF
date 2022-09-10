@@ -6,7 +6,7 @@
 /*   By: pmoghadd <pmoghadd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/08 13:03:49 by pmoghadd          #+#    #+#             */
-/*   Updated: 2022/09/10 20:39:43 by pmoghadd         ###   ########.fr       */
+/*   Updated: 2022/09/10 21:00:51 by pmoghadd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,10 @@ void	save_hex_color(char *hexcolor, t_data	*img, int row, int col)
 {
 	img->color[row][col] = decimal_value(hexcolor);
 }
+
+/*if it finds ',' it means there is color. so splits every element of map the first of which is the data 
+and the second one being the color. I had so many issues with this function because it caused so many leaks. 
+freeing is tricky anyway!*/
 
 char	**save_color(char **s, t_data *img, int row)
 {

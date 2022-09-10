@@ -6,7 +6,7 @@
 /*   By: pmoghadd <pmoghadd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/09 20:57:47 by pmoghadd          #+#    #+#             */
-/*   Updated: 2022/09/10 20:34:59 by pmoghadd         ###   ########.fr       */
+/*   Updated: 2022/09/10 20:58:10 by pmoghadd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ int	ft_strlen_array(char	**s)
 		i++;
 	return (i - 1);
 }
+
+/* calculates the map size*/
 
 void	get_map_size(char	*name, t_data *img)
 {

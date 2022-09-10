@@ -6,7 +6,7 @@
 /*   By: pmoghadd <pmoghadd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/08 13:12:22 by pmoghadd          #+#    #+#             */
-/*   Updated: 2022/09/10 20:40:02 by pmoghadd         ###   ########.fr       */
+/*   Updated: 2022/09/10 20:57:32 by pmoghadd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,6 +89,8 @@ void	draw_y(t_data	*a, t_data	*b, t_data img, int color)
 			2 * img.offset_y + a->y, color);
 	}
 }
+
+/* draws the line with bresenham algorithm*/
 
 void	bresenham(t_data	*a, t_data	*b, t_data img, int color)
 {

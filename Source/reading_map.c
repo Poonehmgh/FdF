@@ -6,11 +6,14 @@
 /*   By: pmoghadd <pmoghadd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/08 14:28:33 by pmoghadd          #+#    #+#             */
-/*   Updated: 2022/09/10 20:40:10 by pmoghadd         ###   ########.fr       */
+/*   Updated: 2022/09/10 20:54:38 by pmoghadd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../Include/fdf.h"
+
+/*map offset is calculated with some rules of thumb maths in a way that the image will be placed 
+approximately at the center*/
 
 void	map_offset(t_data	*img)
 {
@@ -36,6 +39,8 @@ void	free2d(char **s)
 	free(s);
 }
 
+/*helper func for allocating int* and checking the allocation.*/
+
 void	memory_allocation_and_check(t_data *img, int row)
 {
 	img->color[row] = (int *)malloc(sizeof(int) * (img->cols + 1));
@@ -45,6 +50,9 @@ void	memory_allocation_and_check(t_data *img, int row)
 	if (!img->data[row])
 		errors("Error while allocating!", img);
 }
+
+/* this function reads each line and and splits  the line with spaces and saves their data.
+data is converted to int via atoi. Also a very quick check for presence of non-numbers is made via validity chack func*/
 
 void	read_map_subfunction(t_data *img, char *s, int fd)
 {
@@ -74,6 +82,10 @@ void	read_map_subfunction(t_data *img, char *s, int fd)
 	}
 	img->data[i] = NULL;
 }
+
+/* opens the file and allocates two int ** pointers for color and data, 
+then passed the allocated variables to the subfuction. This passing has been done bcz the function 
+was long norminette-wise. At the end it frees the line that has been read from file and closes the file.*/
 
 void	read_map(char *name, t_data *img)
 {
