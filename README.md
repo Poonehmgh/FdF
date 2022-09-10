@@ -1,7 +1,7 @@
 # FdF
-FdF Project for making isometric projection or Wireframe models
+FdF Project for making isometric projection or Wireframe models\n
 
-MiniLibX, the graphical tool:
+MiniLibX, the graphical tool:\n
 
 I have used the school graphical library: the MiniLibX. This library was
 developed internally and includes basic necessary tools to open a window, create images
@@ -12,7 +12,7 @@ and deal with keyboard and mouse events.
 Project description: 
 
 This project is about creating a simple wireframe model representation of a 3D landscape by linking various points (x, y, z) thanks to line segments (edges).
-The project must comply with the following rule:
+The project must comply with the following rule:\n
 • To use the MiniLibX. Either the version available on the school machines,
 or installing it using its sources.
 The program has to represent the model in isometric projection.
